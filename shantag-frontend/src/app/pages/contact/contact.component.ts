@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-contact',
-    standalone: true,
-    imports: [CommonModule],
-    template: `
+  selector: 'app-contact',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
     <div class="bg-slate-50 py-20">
       <div class="max-w-4xl mx-auto px-6">
         <h1 class="text-4xl font-extrabold text-slate-900 mb-8 uppercase tracking-tighter">Contact <span class="text-orange-600">Us</span></h1>
@@ -24,7 +24,7 @@ import { CommonModule } from '@angular/common';
               <div class="border-t border-slate-100 my-4 pt-4">
                 <p class="mb-2"><strong>Sales:</strong> +91 99744 42525</p>
                 <p><strong>Support:</strong> +91 99744 42526</p>
-                <p class="mt-2"><strong>Email:</strong> info&#64;shantag.com</p>
+                <p class="mt-2"><strong>Email:</strong> info&#64;shantaz.com</p>
               </div>
             </address>
           </div>

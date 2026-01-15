@@ -5,9 +5,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent, title: 'ShantaG Machinery | Industrial Food Processing Solutions' },
-    { path: 'about', component: AboutComponent, title: 'About Us | ShantaG Machinery' },
-    { path: 'contact', component: ContactComponent, title: 'Contact Factory | ShantaG Machinery' },
-    { path: 'product/:id', component: ProductDetailComponent, title: 'Product Specifications | ShantaG Machinery' },
+    { path: '', component: HomeComponent, title: 'ShantaZ Machinery | Industrial Food Processing Solutions' },
+    { path: 'about', component: AboutComponent, title: 'About Us | ShantaZ Machinery' },
+    { path: 'contact', component: ContactComponent, title: 'Contact Factory | ShantaZ Machinery' },
+    { path: 'product/:id', component: ProductDetailComponent, title: 'Product Specifications | ShantaZ Machinery' },
     { path: '**', redirectTo: '' }
 ];
