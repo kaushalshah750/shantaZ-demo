@@ -1,0 +1,7 @@
+**/node_modules
+**/.env
+.DSA
+.vscode
+dist/
+tmp/
+coverage/
