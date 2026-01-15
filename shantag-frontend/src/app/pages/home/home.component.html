@@ -1,0 +1,90 @@
+<!-- Hero Section -->
+<header class="bg-slate-50 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <!-- Left: Text -->
+    <div>
+      <div class="inline-block bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-widest mb-6">
+        Est. 1998 • Gujarat, India
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight tracking-tight mb-6">
+        PRECISION ENGINEERING FOR <span class="text-orange-600">MASS PRODUCTION</span>
+      </h1>
+      <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+        Automated food processing solutions designed for durability, consistency, and high output. Specialized in Khakra and Roasting technologies.
+      </p>
+      <div class="flex gap-4">
+        <a href="#catalog" class="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 font-bold uppercase tracking-widest rounded-sm transition-all shadow-lg hover:shadow-xl">
+          View Machines
+        </a>
+        <a href="https://wa.me/919974442525" target="_blank" class="bg-white border-2 border-slate-200 hover:border-orange-600 text-slate-900 hover:text-orange-600 px-8 py-4 font-bold uppercase tracking-widest rounded-sm transition-all">
+          Contact Us
+        </a>
+      </div>
+    </div>
+    
+    <!-- Right: Image -->
+    <div class="relative">
+      <div class="absolute inset-0 bg-orange-600/5 rotate-3 rounded-sm transform"></div>
+      <img src="images/khakra-real.png" alt="Industrial Khakra Machine" class="relative rounded-sm shadow-2xl border border-slate-200 grayscale hover:grayscale-0 transition-all duration-700">
+    </div>
+  </div>
+</header>
+
+<!-- Trust Indicators -->
+<section class="bg-slate-900 text-white py-12 border-b-4 border-orange-600">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Item 1 -->
+      <div class="flex items-center space-x-4">
+        <lucide-icon [img]="ShieldCheck" class="h-10 w-10 text-orange-500"></lucide-icon>
+        <div>
+          <h4 class="font-bold text-lg uppercase">ISO 9001</h4>
+          <p class="text-slate-400 text-sm">Certified Quality</p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="flex items-center space-x-4">
+        <lucide-icon [img]="Award" class="h-10 w-10 text-orange-500"></lucide-icon>
+        <div>
+          <h4 class="font-bold text-lg uppercase">25+ Years</h4>
+          <p class="text-slate-400 text-sm">Industry Experience</p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="flex items-center space-x-4">
+        <lucide-icon [img]="Truck" class="h-10 w-10 text-orange-500"></lucide-icon>
+        <div>
+          <h4 class="font-bold text-lg uppercase">Global</h4>
+          <p class="text-slate-400 text-sm">Shipping & Export</p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="flex items-center space-x-4">
+        <lucide-icon [img]="Clock" class="h-10 w-10 text-orange-500"></lucide-icon>
+        <div>
+          <h4 class="font-bold text-lg uppercase">24/7</h4>
+          <p class="text-slate-400 text-sm">Vital Support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Catalog Section -->
+<section id="catalog" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center space-x-2 mb-16">
+      <div class="h-10 w-10 bg-orange-600 text-white flex items-center justify-center font-bold text-xl rounded-sm">S</div>
+      <span class="text-2xl font-extrabold text-slate-900 tracking-tighter">SHANTA<span class="text-orange-600">Z</span> MACHINERY</span>
+    </div>
+    <div class="w-24 h-1 bg-orange-600 mx-auto mt-6"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (product of products(); track product.id) {
+        <app-product-card [product]="product"></app-product-card>
+      } @empty {
+        <p class="col-span-full text-center text-slate-500 py-12">Loading machinery catalog...</p>
+      }
+    </div>
+  </div>
+</section>

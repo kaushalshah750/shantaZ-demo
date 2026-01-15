@@ -1,0 +1,49 @@
+<div class="h-full flex flex-col bg-white border border-slate-200 rounded-sm hover:shadow-xl hover:border-orange-500/20 transition-all duration-300 group relative">
+  <!-- Image Area -->
+  <a [routerLink]="['/product', product().id]" class="relative aspect-[4/3] bg-slate-50 overflow-hidden border-b border-slate-100 block cursor-pointer">
+    <div class="absolute top-0 right-0 z-10 bg-slate-900 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+      {{ product().model_no }}
+    </div>
+    
+    <img [ngSrc]="product().image_url" 
+         [alt]="product().name"
+         fill
+         class="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+         priority>
+  </a>
+
+  <div class="p-5 flex flex-col flex-grow">
+    <!-- Title -->
+    <a [routerLink]="['/product', product().id]" class="text-lg font-extrabold text-slate-900 uppercase tracking-tight mb-3 leading-tight group-hover:text-orange-600 transition-colors block cursor-pointer">
+      {{ product().name }}
+    </a>
+
+    <!-- Specs Table -->
+    <div class="bg-slate-100 border border-slate-200 p-3 rounded-sm mb-4">
+      <div class="flex flex-col gap-y-2">
+        <div *ngFor="let spec of product().specs | keyvalue" class="flex justify-between items-baseline border-b border-slate-200 last:border-0 pb-1 last:pb-0">
+          <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{{ spec.key }}</span>
+          <span class="text-xs font-mono text-slate-900 font-semibold">{{ spec.value }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description (Truncated) -->
+    <p class="text-sm text-slate-600 mb-6 line-clamp-2 leading-relaxed">
+      {{ product().description }}
+    </p>
+
+    <!-- CTA Button -->
+    <div class="mt-auto pt-4 border-t border-slate-100">
+      <a [href]="whatsappUrl()" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="flex items-center justify-center w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-sm transition-all duration-200 uppercase tracking-wider text-sm shadow-sm hover:shadow-orange-500/30">
+        <span class="mr-2">Enquire on WhatsApp</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
