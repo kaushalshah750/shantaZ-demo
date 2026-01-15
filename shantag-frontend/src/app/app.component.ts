@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LucideAngularModule, ShieldCheck, Truck, Clock, Award } from 'lucide-angular';
@@ -11,9 +11,13 @@ import { LucideAngularModule, ShieldCheck, Truck, Clock, Award } from 'lucide-an
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  // Icons for persistent layout components if needed
-  readonly ShieldCheck = ShieldCheck;
-  readonly Truck = Truck;
-  readonly Clock = Clock;
-  readonly Award = Award;
+  mobileMenuOpen = signal(false);
+
+  toggleMobileMenu() {
+    this.mobileMenuOpen.set(!this.mobileMenuOpen());
+  }
+
+  closeMobileMenu() {
+    this.mobileMenuOpen.set(false);
+  }
 }
