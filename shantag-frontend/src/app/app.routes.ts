@@ -3,9 +3,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { MachineryComponent } from './pages/machinery/machinery.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent, title: 'ShantaZ Machinery | Industrial Food Processing Solutions' },
+    { path: 'machinery', component: MachineryComponent, title: 'Our Machinery | ShantaZ Machinery' },
     { path: 'about', component: AboutComponent, title: 'About Us | ShantaZ Machinery' },
     { path: 'contact', component: ContactComponent, title: 'Contact Factory | ShantaZ Machinery' },
     { path: 'product/:id', component: ProductDetailComponent, title: 'Product Specifications | ShantaZ Machinery' },

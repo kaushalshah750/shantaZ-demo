@@ -133,21 +133,28 @@
   </div>
 </section>
 
-<!-- Catalog Section -->
-<section id="catalog" class="py-20 bg-white">
+<!-- Machinery Teaser Section -->
+<section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Our Catalog</span>
-      <h2 class="text-4xl font-extrabold text-slate-900 mt-2 uppercase tracking-tight">Industrial Machinery</h2>
+    <div class="text-center mb-12">
+      <span class="text-orange-600 font-bold tracking-widest uppercase text-sm">Featured Products</span>
+      <h2 class="text-4xl font-extrabold text-slate-900 mt-2 uppercase tracking-tight">Our Machinery Range</h2>
       <div class="w-24 h-1 bg-orange-600 mx-auto mt-6"></div>
+      <p class="text-slate-600 mt-6 max-w-2xl mx-auto">From Khakra makers to industrial roasters, we manufacture precision equipment for the food processing industry.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      @for (product of products(); track product.id) {
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      @for (product of products() | slice:0:3; track product.id) {
         <app-product-card [product]="product"></app-product-card>
       } @empty {
-        <p class="col-span-full text-center text-slate-500 py-12">Loading machinery catalog...</p>
+        <p class="col-span-full text-center text-slate-500 py-12">Loading machinery preview...</p>
       }
+    </div>
+
+    <div class="text-center">
+      <a routerLink="/machinery" class="inline-block bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 font-bold uppercase tracking-widest rounded-sm transition-all shadow-lg hover:shadow-xl">
+        View Full Catalog
+      </a>
     </div>
   </div>
 </section>
